@@ -1,0 +1,38 @@
+ <script>
+ //Q1. What is a function decleartion
+    function square(num){
+        return num * num;
+    }
+
+    console.log(square(2))
+
+    //Q2. What is a function expression
+   // The idea that a function is stored inside a variable
+   const square = function(a){
+    return a * a;
+   }
+   console.log(square(3))
+
+   //Q3. What are first class fxns?
+    //Ans.
+    // Fxns that can be passed as variables
+    // Fxns that can be passed as arguments to other fxns
+    function square(num){
+        return num * num;
+    }
+
+    function displaySqyare(fn){
+        console.log(`Square is ${fn(5)}`)
+    }
+displaySqyare(square);
+
+  //Q4. What is IIFE?
+    // A function that is executed immediately
+(function square(num){
+    console.log(num * num)
+})(5)
+
+
+
+
+   </script>
