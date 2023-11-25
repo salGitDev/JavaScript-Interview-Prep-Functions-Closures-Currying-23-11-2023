@@ -32,7 +32,67 @@ displaySqyare(square);
     console.log(num * num)
 })(5)
 
+//Q5. Output based IIFE Question
+    // A function that is executed immediately
+(function (x){
+    return (function (y){
+        console.log(x);
+    })(2);
+})(1)
+// The ability of a fxn to access variables and fxns
+//that are lexically out of its scope is called closure
 
+
+ //Q6. What is a function scope?
+
+    var num1 = 20;
+    num2 = 3;
+    name = "Roadside Coder";
+
+    function multiply(){
+        return num1 * num2;
+    }
+
+    console.log(multiply()); // Return 60
+
+    function getScore(){
+        var num1 = 2; //Shadow the global scope variables
+        num2 = 3; //Shadow the global scope variables
+
+        function add(){
+        return `${name} score ${num1 + num2}`;
+    }
+    return add();
+    }
+
+    console.log(getScore()); 
+
+
+//Q7. Output based question on Function scope
+
+   for (let i = 0; i < 5; i++){
+    setTimeout(function (){
+        console.log(i);
+    }, i * 1000);
+   }
+
+   for (var j = 0; j < 5; j++){
+    setTimeout(function (){
+        console.log(j);
+    }, j * 1000);
+   }
+    
+
+    //Q8. Function Hoisting
+  functionName();
+  function functionName(){
+    console.log("Roadside Coder");
+  }
+    //This shows that functions are hoisted completely
+  
+   </script>
+
+   
 
 
    </script>
