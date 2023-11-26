@@ -7,13 +7,16 @@
 </head>
 <body>
  <script>
-  //Q9. Output based question on Function Hoisting
-   var x = 21;
-   var fun = function () {
-    console.log(x);
-    var x = 20;
-   };
-   fun();
-   </script>
+    function makeFunc(){
+        var name = "Mozilla";
+        function displayName(){
+            console.log(name);
+        }
+        return displayName;
+    }
+
+    var myFunc = makeFunc();
+    myFunc();
+  </script>
 </body>
 </html>
